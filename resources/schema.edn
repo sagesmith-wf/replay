@@ -1,0 +1,6 @@
+[{:db/id #db/id[:db.part/db]
+  :db.install/_attribute :db.part/db
+  :db/ident :xal
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "The XAL string to associate with a transaction."}]
