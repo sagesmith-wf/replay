@@ -8,7 +8,7 @@
 
 (defmulti convert-api :api)
 
-(defmethod convert-api (first api-versions) [call-map]
+(defmethod convert-api "2.0.7" [call-map]
   (update-in (:xal-object call-map) [1 :api] nil?))
 
 (defmethod convert-api :default [call-map]
@@ -16,11 +16,7 @@
 
 (defmulti convert-xal :xal)
 
-(defmethod convert-xal "0.0.1" [call-map]
-  (update-in (:xal-object call-map) [1 :xal] nil?))
 
-(defmethod convert-xal :default [call-map]
-  (println "UNSUPPORTED VERSION OF XAL:" (:xal call-map)))
 
 (defn do-conversions
   [call-map]
